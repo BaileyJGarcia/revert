@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Fraunces", serif;
+}
+
+section {
+    padding: 100px;
+}
+
+h1 {
+    font-size: 316px;
+    font-weight: 400;
+    color: $yellow;
+
+    @include mq-max('lg') {
+        font-size: 200px
+    }
+    @include mq-max('md') {
+        font-size: 150px
+    }
+    @include mq-max('sm') {
+        font-size: 100px
+    }
+}
+
+.large-text {
+    font-size: 66px;
+    font-weight: 300;
+
+    @include mq-max('lg') {
+        font-size: 50px
+    }
+    @include mq-max('sm') {
+        font-size: 36px
+    }
+    @include mq-max('xs') {
+        font-size: 30px
+    }
+}
+
+.medium-text {
+    font-size: 26px;
+    font-weight: 300;
+
+    @include mq-max('sm') {
+        font-size: 20px
+    }
+}
+
+.small-text {
+    font-size: 20px;
+    font-weight: 300;
+
+    @include mq-max('sm') {
+        font-size: 14px
+    }
+}
+
+.button {
+    @include row-center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 50px;
+
+    @include mq-max('sm') {
+        font-size: 14px
+    }
+}
+
+.white-btn {
+    color: $black;
+    background-color: $white;
+}
+
+.green-btn {
+    color: white;
+    background-color: $dark-green;
+}

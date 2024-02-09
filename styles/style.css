@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fraunces", serif;
+}
+
+section {
+  padding: 100px;
+}
+
+h1 {
+  font-size: 316px;
+  font-weight: 400;
+  color: #fffdc3;
+}
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 200px;
+  }
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 150px;
+  }
+}
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 100px;
+  }
+}
+
+.large-text {
+  font-size: 66px;
+  font-weight: 300;
+}
+@media screen and (max-width: 1024px) {
+  .large-text {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .large-text {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .large-text {
+    font-size: 30px;
+  }
+}
+
+.medium-text {
+  font-size: 26px;
+  font-weight: 300;
+}
+@media screen and (max-width: 480px) {
+  .medium-text {
+    font-size: 20px;
+  }
+}
+
+.small-text {
+  font-size: 20px;
+  font-weight: 300;
+}
+@media screen and (max-width: 480px) {
+  .small-text {
+    font-size: 14px;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 50px;
+}
+@media screen and (max-width: 480px) {
+  .button {
+    font-size: 14px;
+  }
+}
+
+.white-btn {
+  color: #403f2b;
+  background-color: #fefaf0;
+}
+
+.green-btn {
+  color: white;
+  background-color: #403f2b;
+}
+
+#hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+#hero-section .hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
+  text-align: center;
+}
+#hero-section .hero-text h3, #hero-section .hero-text p {
+  color: #fefaf0;
+  padding-bottom: 50px;
+}
+#hero-section .hero-text p {
+  font-size: 30px;
+}
+@media screen and (max-width: 1024px) {
+  #hero-section .hero-text p {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #hero-section .hero-text p {
+    font-size: 20px;
+  }
+}
+#hero-section .hero-text a {
+  padding: 14px 26px;
+}
+#hero-section img {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+#products-section {
+  text-align: center;
+}
+#products-section h2 {
+  margin-bottom: 80px;
+}
+#products-section .products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+#products-section .products .product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 24%;
+}
+@media screen and (max-width: 1024px) {
+  #products-section .products .product {
+    width: 54%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #products-section .products .product {
+    width: 90%;
+  }
+}
+#products-section .products .product .product-image {
+  width: 100%;
+  border-radius: 30px;
+}
+@media screen and (max-width: 768px) {
+  #products-section .products .product .product-image {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  #products-section .products .product .product-image {
+    width: 120%;
+  }
+}
+#products-section .products .product .product-text {
+  color: #403f2b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (max-width: 1024px) {
+  #products-section .products {
+    flex-direction: column;
+  }
+}
+
+#statement-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c4c197;
+}
+@media screen and (max-width: 1024px) {
+  #statement-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#statement-section .statement-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  color: #403f2b;
+}
+@media screen and (max-width: 1024px) {
+  #statement-section .statement-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+#statement-section .statement-text a {
+  padding: 14px 26px;
+}
+@media screen and (max-width: 1024px) {
+  #statement-section .statement-text a {
+    margin-bottom: 40px;
+  }
+}
+#statement-section img {
+  border-radius: 8%;
+}
+@media screen and (max-width: 480px) {
+  #statement-section img {
+    width: 150%;
+  }
+}/*# sourceMappingURL=style.css.map */
