@@ -184,10 +184,21 @@
     gap: 40px;
     background-color: $light-green;
 
+    h2 {
+        @include mq-max('md') {
+            text-align: center;
+        }
+    }
+
     .heading-text {
         text-align: center;
         font-weight: 100;
         width: 40%;
+
+        @include mq-max('md') {
+            width: 100%;
+        }
+
     }
 
     .mission-icons {
@@ -195,9 +206,13 @@
         gap: 140px;
         margin: 0 20px;
 
+        @include mq-max('xl') {
+            gap: 80px
+        }
+
         @include mq-max('md') {
             flex-wrap: wrap;
-            gap: 0;
+            gap: 20px;
         }
 
         .icon-group {
@@ -205,6 +220,10 @@
 
             svg {
                 width: 100px;
+
+                @include mq-max('sm') {
+                    width: 80px;
+                }
             }
         }
     }

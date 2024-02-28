@@ -323,10 +323,20 @@ h1 {
   gap: 40px;
   background-color: #ddddcc;
 }
+@media screen and (max-width: 768px) {
+  #mission-section h2 {
+    text-align: center;
+  }
+}
 #mission-section .heading-text {
   text-align: center;
   font-weight: 100;
   width: 40%;
+}
+@media screen and (max-width: 768px) {
+  #mission-section .heading-text {
+    width: 100%;
+  }
 }
 #mission-section .mission-icons {
   display: flex;
@@ -335,10 +345,15 @@ h1 {
   gap: 140px;
   margin: 0 20px;
 }
+@media screen and (max-width: 1200px) {
+  #mission-section .mission-icons {
+    gap: 80px;
+  }
+}
 @media screen and (max-width: 768px) {
   #mission-section .mission-icons {
     flex-wrap: wrap;
-    gap: 0;
+    gap: 20px;
   }
 }
 #mission-section .mission-icons .icon-group {
@@ -348,6 +363,11 @@ h1 {
 }
 #mission-section .mission-icons .icon-group svg {
   width: 100px;
+}
+@media screen and (max-width: 480px) {
+  #mission-section .mission-icons .icon-group svg {
+    width: 80px;
+  }
 }
 #mission-section .mission-text {
   display: flex;
