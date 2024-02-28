@@ -90,7 +90,7 @@
 
 #statement-section {
     @include row-between;
-    background-color: $light-green;
+    background-color: $green;
 
     @include mq-max('lg') {
         @include column-center;
@@ -121,6 +121,113 @@
         @include mq-max('sm') {
             width: 150%;
         }
+    }
+}
+
+#collections-section {
+    @include column-center;
+
+    h2 {
+        padding-bottom: 60px;
+
+        @include mq-max('sm') {
+            text-align: center;
+        }
+    }
+
+    .collections {
+        @include row-between;
+        gap: 40px;
+        width: 100%;
+
+        @include mq-max('lg') {
+            @include column-center;
+        }
+
+        .collection {
+            @include column-center;
+            position: relative;
+            
+            .collection-text {
+                position: absolute;
+                top: 46%;
+                text-align: center;
+
+                h3 {
+                    color: $yellow;
+                }
+
+                p {
+                    color: $white;
+                }
+            }
+
+            img {
+                border-radius: 6%;
+                width: 90%;
+
+                @include mq-max('sm') {
+                    width: 130%;
+                }
+
+                @include mq-max('xs') {
+                    width: 150%;
+                }
+            }
+        }
+    }
+
+}
+
+#mission-section {
+    @include column-center;
+    gap: 40px;
+    background-color: $light-green;
+
+    .heading-text {
+        text-align: center;
+        font-weight: 100;
+        width: 40%;
+    }
+
+    .mission-icons {
+        @include row-between;
+        gap: 140px;
+        margin: 0 20px;
+
+        @include mq-max('md') {
+            flex-wrap: wrap;
+            gap: 0;
+        }
+
+        .icon-group {
+            @include column-center;
+
+            svg {
+                width: 100px;
+            }
+        }
+    }
+
+    .mission-text {
+        @include column-center;
+        gap: 40px;
+        width: 60%;
+        padding-top: 80px;
+        text-align: center;
+
+        @include mq-max('lg') {
+            width: 100%;
+        }
+
+        p {
+            font-weight: 100;
+        }
+    }
+
+    a {
+        padding: 12px 22px;
+        font-weight: 100;
     }
 }
 

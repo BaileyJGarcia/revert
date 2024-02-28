@@ -28,7 +28,7 @@ h1 {
     }
 }
 
-.large-text {
+.xl-text {
     font-size: 66px;
     font-weight: 300;
 
@@ -39,7 +39,20 @@ h1 {
         font-size: 36px
     }
     @include mq-max('xs') {
+        font-size: 26px
+    }
+}
+
+.large-text {
+    font-size: 40px;
+    font-weight: 300;
+
+   
+    @include mq-max('sm') {
         font-size: 30px
+    }
+    @include mq-max('xs') {
+        font-size: 20px
     }
 }
 
