@@ -28,6 +28,21 @@ h1 {
     }
 }
 
+.xxl-text {
+    font-size: 200px;
+    font-weight: 300;
+
+    @include mq-max('xl') {
+        font-size: 150px;
+    }
+    @include mq-max('lg') {
+        font-size: 120px;
+    }
+    @include mq-max('md') {
+        font-size: 100px;
+    }
+}
+
 .xl-text {
     font-size: 66px;
     font-weight: 300;

@@ -33,6 +33,26 @@ h1 {
   }
 }
 
+.xxl-text {
+  font-size: 200px;
+  font-weight: 300;
+}
+@media screen and (max-width: 1200px) {
+  .xxl-text {
+    font-size: 150px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .xxl-text {
+    font-size: 120px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .xxl-text {
+    font-size: 100px;
+  }
+}
+
 .xl-text {
   font-size: 66px;
   font-weight: 300;
@@ -397,17 +417,42 @@ h1 {
   align-items: center;
   position: relative;
 }
+@media screen and (max-width: 1024px) {
+  #sale-section {
+    padding: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #sale-section {
+    padding: 20px;
+  }
+}
+#sale-section .sale-img {
+  width: 100%;
+}
 #sale-section .sale-img img {
-  width: 90%;
-  margin: 50px 100px;
+  width: 100%;
   border-radius: 50px;
 }
 #sale-section .sale-content {
-  border: 2px solid crimson;
   position: absolute;
-  top: 30%;
+  top: 36%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (max-width: 390px) {
+  #sale-section .sale-content {
+    top: 30%;
+  }
+}
+#sale-section .sale-content h3 {
+  color: #fefaf0;
 }
 #sale-section .sale-content h2 {
   color: #fffdc3;
-  font-size: 200px;
+}
+#sale-section .sale-content a {
+  padding: 10px 40px;
 }/*# sourceMappingURL=style.css.map */
