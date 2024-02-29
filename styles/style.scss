@@ -250,3 +250,29 @@
     }
 }
 
+#sale-section {
+    @include column-center;
+    position: relative;
+
+    .sale-img {
+
+        img {
+            width: 90%;
+            margin: 50px 100px;
+            border-radius: 50px;
+        }
+    }
+
+    .sale-content {
+        border: $test;
+        position: absolute;
+        top: 30%;
+
+        h2 {
+            color: $yellow;
+            font-size: 200px;
+        }
+    
+    }
+}
+
