@@ -1,297 +1,433 @@
-@import './variables', './global';
+@import "./variables", "./global";
 
 #hero-section {
+  @include column-center;
+  position: relative;
+
+  .hero-text {
     @include column-center;
-    position: relative;
-
-    .hero-text {
-        @include column-center;
-        padding-top: 150px;
-        text-align: center;
-
-        h3, p {
-            color: $white;
-            padding-bottom: 50px;
-        }
-
-        p {
-            font-size: 30px;
-            
-            @include mq-max('lg') {
-                font-size: 30px
-            }
-            @include mq-max('sm') {
-                font-size: 20px
-            }
-        }
-
-        a {
-            padding: 14px 26px;
-        }
-    }
-
-    img {
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        z-index: -1;
-    }
-}
-
-#products-section {
+    padding-top: 150px;
     text-align: center;
 
-    h2 {
-        margin-bottom: 80px;
+    h3,
+    p {
+      color: $white;
+      padding-bottom: 50px;
     }
 
-    .products {
-        @include row-between;
-        gap: 40px;
+    p {
+      font-size: 30px;
 
-        .product {
-            @include column-center;
-            gap: 20px;
-            width: 24%;
-
-            @include mq-max('lg') {
-                width: 54%;
-            }
-            @include mq-max('md') {
-                width: 90%;
-            }
-
-            .product-image {
-                width: 100%;
-                border-radius: 30px;
-
-                @include mq-max('md') {
-                    width: 80%;
-                }  
-                @include mq-max('sm') {
-                    width: 120%;
-                }  
-            }
-
-            .product-text {
-                color: $black;
-                @include column-center;
-                gap: 10px;
-            }
-        }
-
-        @include mq-max('lg') {
-            flex-direction: column;
-        }
-    }
-}
-
-#statement-section {
-    @include row-between;
-    background-color: $green;
-
-    @include mq-max('lg') {
-        @include column-center;
-    }
-
-    .statement-text {
-        @include column-left;
-        gap: 40px;
-        color: $dark-green;
-
-        @include mq-max('lg') {
-            @include column-center;
-            text-align: center;
-        }
-
-        a {
-            padding: 14px 26px;
-
-            @include mq-max('lg') {
-                margin-bottom: 40px;
-            }
-        }
-    }
-
-    img {
-        border-radius: 8%;
-
-        @include mq-max('sm') {
-            width: 150%;
-        }
-    }
-}
-
-#collections-section {
-    @include column-center;
-
-    h2 {
-        padding-bottom: 60px;
-
-        @include mq-max('sm') {
-            text-align: center;
-        }
-    }
-
-    .collections {
-        @include row-between;
-        gap: 40px;
-        width: 100%;
-
-        @include mq-max('lg') {
-            @include column-center;
-        }
-
-        .collection {
-            @include column-center;
-            position: relative;
-            
-            .collection-text {
-                position: absolute;
-                top: 46%;
-                text-align: center;
-
-                h3 {
-                    color: $yellow;
-                }
-
-                p {
-                    color: $white;
-                }
-            }
-
-            img {
-                border-radius: 6%;
-                width: 90%;
-
-                @include mq-max('sm') {
-                    width: 130%;
-                }
-
-                @include mq-max('xs') {
-                    width: 150%;
-                }
-            }
-        }
-    }
-
-}
-
-#mission-section {
-    @include column-center;
-    gap: 40px;
-    background-color: $light-green;
-
-    h2 {
-        @include mq-max('md') {
-            text-align: center;
-        }
-    }
-
-    .heading-text {
-        text-align: center;
-        font-weight: 100;
-        width: 40%;
-
-        @include mq-max('md') {
-            width: 100%;
-        }
-
-    }
-
-    .mission-icons {
-        @include row-between;
-        gap: 140px;
-        margin: 0 20px;
-
-        @include mq-max('xl') {
-            gap: 80px
-        }
-
-        @include mq-max('md') {
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .icon-group {
-            @include column-center;
-
-            svg {
-                width: 100px;
-
-                @include mq-max('sm') {
-                    width: 80px;
-                }
-            }
-        }
-    }
-
-    .mission-text {
-        @include column-center;
-        gap: 40px;
-        width: 60%;
-        padding-top: 80px;
-        text-align: center;
-
-        @include mq-max('lg') {
-            width: 100%;
-        }
-
-        p {
-            font-weight: 100;
-        }
+      @include mq-max("lg") {
+        font-size: 30px;
+      }
+      @include mq-max("sm") {
+        font-size: 20px;
+      }
     }
 
     a {
-        padding: 12px 22px;
-        font-weight: 100;
+      padding: 14px 26px;
     }
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+}
+
+#products-section {
+  text-align: center;
+
+  h2 {
+    margin-bottom: 80px;
+  }
+
+  .products {
+    @include row-between;
+    gap: 40px;
+
+    .product {
+      @include column-center;
+      gap: 20px;
+      width: 24%;
+
+      @include mq-max("lg") {
+        width: 54%;
+      }
+      @include mq-max("md") {
+        width: 90%;
+      }
+
+      .product-image {
+        width: 100%;
+        border-radius: 30px;
+
+        @include mq-max("md") {
+          width: 80%;
+        }
+        @include mq-max("sm") {
+          width: 120%;
+        }
+      }
+
+      .product-text {
+        color: $black;
+        @include column-center;
+        gap: 10px;
+      }
+    }
+
+    @include mq-max("lg") {
+      flex-direction: column;
+    }
+  }
+}
+
+#statement-section {
+  @include row-between;
+  background-color: $green;
+
+  @include mq-max("lg") {
+    @include column-center;
+  }
+
+  .statement-text {
+    @include column-left;
+    gap: 40px;
+    color: $dark-green;
+
+    @include mq-max("lg") {
+      @include column-center;
+      text-align: center;
+    }
+
+    a {
+      padding: 14px 26px;
+
+      @include mq-max("lg") {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  img {
+    border-radius: 8%;
+
+    @include mq-max("sm") {
+      width: 150%;
+    }
+  }
+}
+
+#collections-section {
+  @include column-center;
+
+  h2 {
+    padding-bottom: 60px;
+
+    @include mq-max("sm") {
+      text-align: center;
+    }
+  }
+
+  .collections {
+    @include row-between;
+    gap: 40px;
+    width: 100%;
+
+    @include mq-max("lg") {
+      @include column-center;
+    }
+
+    .collection {
+      @include column-center;
+      position: relative;
+
+      .collection-text {
+        position: absolute;
+        top: 46%;
+        text-align: center;
+
+        h3 {
+          color: $light-yellow;
+        }
+
+        p {
+          color: $white;
+        }
+      }
+
+      img {
+        border-radius: 6%;
+        width: 90%;
+
+        @include mq-max("sm") {
+          width: 130%;
+        }
+
+        @include mq-max("xs") {
+          width: 150%;
+        }
+      }
+    }
+  }
+}
+
+#mission-section {
+  @include column-center;
+  gap: 40px;
+  background-color: $light-green;
+
+  h2 {
+    @include mq-max("md") {
+      text-align: center;
+    }
+  }
+
+  .heading-text {
+    text-align: center;
+    font-weight: 100;
+    width: 40%;
+
+    @include mq-max("md") {
+      width: 100%;
+    }
+  }
+
+  .mission-icons {
+    @include row-between;
+    gap: 140px;
+    margin: 0 20px;
+
+    @include mq-max("xl") {
+      gap: 80px;
+    }
+
+    @include mq-max("md") {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .icon-group {
+      @include column-center;
+
+      svg {
+        width: 100px;
+
+        @include mq-max("sm") {
+          width: 80px;
+        }
+      }
+    }
+  }
+
+  .mission-text {
+    @include column-center;
+    gap: 40px;
+    width: 60%;
+    padding-top: 80px;
+    text-align: center;
+
+    @include mq-max("lg") {
+      width: 100%;
+    }
+
+    p {
+      font-weight: 100;
+    }
+  }
+
+  a {
+    padding: 12px 22px;
+    font-weight: 100;
+  }
 }
 
 #sale-section {
+  @include column-center;
+  position: relative;
+
+  @include mq-max("lg") {
+    padding: 50px;
+  }
+  @include mq-max("sm") {
+    padding: 20px;
+  }
+
+  .sale-img {
+    width: 100%;
+
+    img {
+      width: 100%;
+      border-radius: 50px;
+    }
+  }
+
+  .sale-content {
+    position: absolute;
+    top: 36%;
     @include column-center;
-    position: relative;
-    // padding: 0;
+    gap: 20px;
 
-    @include mq-max('lg') {
-        padding: 50px;
-    }
-    @include mq-max('sm') {
-        padding: 20px;
+    @include mq-max("xs") {
+      top: 30%;
     }
 
-    .sale-img {
-        width: 100%;
-        
-        img {
-            width: 100%;
-            border-radius: 50px;
-        }
+    h3 {
+      color: $white;
     }
 
-    .sale-content {
-        position: absolute;
-        top: 36%;
-        @include column-center;
-        gap: 20px;
-
-        @include mq-max('xs') {
-            top: 30%;
-        }
-
-        h3 {
-            color: $white;
-        }
-
-        h2 {
-            color: $yellow;
-        }
-    
-        a {
-            padding: 10px 40px;
-        }
+    h2 {
+      color: $light-yellow;
     }
+
+    a {
+      padding: 10px 40px;
+    }
+  }
 }
 
+#follow-section {
+  background-color: $yellow;
+  @include column-center;
+
+  .footer-text {
+    @include column-center;
+    padding-bottom: 50px;
+  }
+
+  .footer-images {
+    @include row-between;
+    gap: 20px;
+
+    @include mq-max("md") {
+      @include column-center;
+    }
+
+    .footer-img {
+      width: 24%;
+
+      img {
+        width: 100%;
+        border-radius: 20px;
+
+        @include mq-max("md") {
+          width: 200%;
+        }
+      }
+    }
+  }
+}
+
+#pre-footer {
+  @include row-between;
+  background-color: $yellow;
+  border-top: 1px solid $black;
+  border-bottom: 1px solid $black;
+
+  @include mq-max("lg") {
+    @include column-left;
+  }
+  @include mq-max("xs") {
+    padding-left: 0px;
+  }
+
+  .footer-title {
+    @include column;
+    width: 40%;
+    gap: 50px;
+
+    @include mq-max("lg") {
+      width: 100%;
+    }
+    @include mq-max("sm") {
+      width: 120%;
+    }
+    @include mq-max("xs") {
+      padding-left: 20px;
+    }
+  }
+
+  .footer-links {
+    @include row;
+    gap: 100px;
+    margin: 200px 0 0 100px;
+
+    @include mq-max("lg") {
+      width: 100%;
+      margin-left: 0;
+    }
+    @include mq-max("sm") {
+      gap: 80px;
+      justify-content: center;
+    }
+    @include mq-max("xs") {
+      gap: 60px;
+      padding-left: 60px;
+    }
+
+    .footer-links-group {
+      @include column;
+      gap: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $black;
+
+      @include mq-max("sm") {
+        width: 160%;
+      }
+    }
+  }
+}
+
+footer {
+  @include row-between;
+  background-color: $yellow;
+  height: 8vh;
+
+  .copyright {
+    margin: 20px 0 0 200px;
+
+    @include mq-max("lg") {
+      margin-left: 100px;
+    }
+    @include mq-max("md") {
+      margin-left: 20px;
+    }
+    @include mq-max("sm") {
+      display: none;
+    }
+  }
+
+  .social-links {
+    @include row-between;
+    gap: 50px;
+    margin: 20px 200px 0 0;
+
+    @include mq-max("lg") {
+      margin-right: 100px;
+    }
+    @include mq-max("md") {
+      margin-right: 20px;
+    }
+    @include mq-max("sm") {
+      margin-left: 20px;
+    }
+    @include mq-max("xs") {
+      gap: 30px;
+      margin-left: 30px;
+    }
+
+    a {
+      color: $black;
+    }
+  }
+}

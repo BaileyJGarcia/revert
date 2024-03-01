@@ -1,4 +1,5 @@
-$yellow: #fffdc3;
+$light-yellow: #fffdc3;
+$yellow: #e8e59b;
 $light-green: #ddddcc;
 $green: #c4c197;
 $dark-green: #403f2b;
@@ -12,15 +13,15 @@ $test: 2px solid crimson;
 }
 
 @mixin row-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin row-between {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @mixin column {
@@ -29,54 +30,54 @@ $test: 2px solid crimson;
 }
 
 @mixin column-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @mixin column-left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 @mixin absolute-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
 }
 
 $max-breakpoints: (
-  'xs': 390px,
-  'sm': 480px,
-  'md': 768px,
-  'lg': 1024px,
-  'xl': 1200px,
-  'xxl': 1440px,
-  'xxxl': 1920px
+  "xs": 390px,
+  "sm": 480px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1200px,
+  "xxl": 1440px,
+  "xxxl": 1920px,
 );
 
 @mixin mq-max($breakpoint) {
-    $value: map-get($max-breakpoints, $breakpoint);
-    @media screen and (max-width: $value) {
-      @content;
-    }
+  $value: map-get($max-breakpoints, $breakpoint);
+  @media screen and (max-width: $value) {
+    @content;
+  }
 }
 
 $min-breakpoints: (
-  'xs': 391px,
-  'sm': 481px,
-  'md': 769px,
-  'lg': 1025px,
-  'xl': 1201px,
-  'xxl': 1441px,
-  'xxxl': 1921px
+  "xs": 391px,
+  "sm": 481px,
+  "md": 769px,
+  "lg": 1025px,
+  "xl": 1201px,
+  "xxl": 1441px,
+  "xxxl": 1921px,
 );
 
 @mixin mq-min($breakpoint) {
-    $value: map-get($min-breakpoints, $breakpoint);
-    @media screen and (min-width: $value) {
-      @content;
-    }
+  $value: map-get($min-breakpoints, $breakpoint);
+  @media screen and (min-width: $value) {
+    @content;
+  }
 }
